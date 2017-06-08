@@ -1,0 +1,26 @@
+.Story {
+  border: 1px solid grey;
+  height: 400px;
+  box-shadow: var(--shadow-medium);
+  background: var(--color-white);
+}
+
+.Story h1 {
+  /*font-size: 20px;*/
+  border-bottom: 1px solid var(--color-grey--100);
+}
+
+.Story--rank-3 h1 {
+  height: var(--size-header--small);
+}
+
+.Story--rank-2 h1 {
+  height: var(--size-header--medium);
+}
+
+.Story--rank-1 h1 {
+  height: var(--size-header--large);
+}
+
+.Story__body {
+}

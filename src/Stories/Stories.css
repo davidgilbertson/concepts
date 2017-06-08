@@ -1,0 +1,24 @@
+.Stories {
+  display: flex;
+  justify-content: space-around;
+}
+
+.Stories__track--small {
+  margin-top: calc(var(--size-header--small) * -1);
+  width: var(--size-rank-3-width);
+}
+
+.Stories__track--medium {
+  margin-top: calc(var(--size-header--medium) * -1);
+  width: var(--size-rank-2-width);
+}
+
+.Stories__track--large {
+  margin-top: calc(var(--size-header--large) * -1);
+  width: var(--size-rank-1-width);
+}
+
+.Stories__track {
+  border-left: 1px dashed grey;
+  border-right: 1px dashed grey;
+}
