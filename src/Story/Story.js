@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import './Story.css';
 
@@ -7,9 +8,7 @@ const Story = props => {
 
   return (
     <article className={className}>
-      <h1
-        className={`type-header-rank-${props.story.rank}`}
-      >{props.story.title}</h1>
+      <h1 className="Story__title">{props.story.title}</h1>
       <div className="Story__body">
         {props.story.body}
       </div>

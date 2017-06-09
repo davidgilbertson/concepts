@@ -13,6 +13,7 @@
 
 .Header__title {
   font-size: 40px;
+  font-weight: 300;
 }
 
 .Header__sign-in {

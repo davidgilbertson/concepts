@@ -1,26 +1,34 @@
 .Story {
-  border: 1px solid grey;
-  height: 400px;
   box-shadow: var(--shadow-medium);
   background: var(--color-white);
+  margin-bottom: 10px;
 }
 
-.Story h1 {
-  /*font-size: 20px;*/
+.Story--rank-3 {
+  --local-size: var(--size-header--small);
+}
+
+.Story--rank-2 {
+  --local-size: var(--size-header--medium);
+}
+
+.Story--rank-1 {
+  --local-size: var(--size-header--large);
+}
+
+.Story__title {
+  font-weight: 300;
   border-bottom: 1px solid var(--color-grey--100);
-}
-
-.Story--rank-3 h1 {
-  height: var(--size-header--small);
-}
-
-.Story--rank-2 h1 {
-  height: var(--size-header--medium);
-}
-
-.Story--rank-1 h1 {
-  height: var(--size-header--large);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: var(--local-size);
+  font-size: calc(var(--local-size) * 0.33);
+  line-height: calc(var(--local-size) * 0.33);
+  padding: 0 5px;
 }
 
 .Story__body {
+  padding: 10px 10px 20px;
 }

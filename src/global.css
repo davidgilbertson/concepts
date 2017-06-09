@@ -1,12 +1,14 @@
 :root {
-  --color-primary: rgb(68, 84, 106);
+  --color-primary: #2196F3;
   --color-white: white;
-  --color-grey--100: rgb(242, 242, 242);
+  --color-grey--100: #CFD8DC;
+  --color-grey--200: #B0BEC5;
+  --color-grey--900: #263238;
 
-  --size-header-height: 190px;
-  --size-header--small: 50px;
-  --size-header--medium: 60px;
-  --size-header--large: 85px;
+  --size-header-height: 200px;
+  --size-header--small: 45px;
+  --size-header--medium: 75px;
+  --size-header--large: 100px;
   --size-rank-1-story-height: 80px;
 
   --size-grid-spacing: 20px;
@@ -40,6 +42,7 @@ html {
 body {
   overflow-y: scroll;
   font-family: var(--font-sans-serif);
+  color: var(--color-grey--900);
   background: var(--color-grey--100);
 }
 
