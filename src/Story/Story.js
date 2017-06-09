@@ -1,10 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import classnames from 'classnames';
-import './Story.css';
+import React from "react";
+import PropTypes from "prop-types";
+import classnames from "classnames";
+import "./Story.css";
 
 const Story = props => {
-  const className = classnames('Story', `Story--rank-${props.story.rank}`);
+  const className = classnames("Story", `Story--rank-${props.story.rank}`);
 
   return (
     <article className={className}>
@@ -19,8 +19,8 @@ const Story = props => {
 Story.propTypes = {
   setFocusedStory: PropTypes.func.isRequired,
   story: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-  }).isRequired,
+    title: PropTypes.string.isRequired
+  }).isRequired
 };
 
 export default Story;

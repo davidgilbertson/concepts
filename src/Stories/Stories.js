@@ -1,6 +1,6 @@
-import React, { PropTypes } from 'react';
-import './Stories.css';
-import Story from '../Story/Story';
+import React, { PropTypes } from "react";
+import "./Stories.css";
+import Story from "../Story/Story";
 
 const Stories = props => {
   const track1Stories = [];
@@ -61,7 +61,7 @@ const Stories = props => {
 
 Stories.propTypes = {
   setFocusedStory: PropTypes.func.isRequired,
-  stories: PropTypes.array.isRequired,
+  stories: PropTypes.array.isRequired
 };
 
 export default Stories;

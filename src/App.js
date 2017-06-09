@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import stories from './data/storyData';
-import Header from './Header/Header';
-import Stories from './Stories/Stories';
-import './App.css';
-import './global.css';
-import './typography.css';
+import React, { Component } from "react";
+import stories from "./data/storyData";
+import Header from "./Header/Header";
+import Stories from "./Stories/Stories";
+import "./App.css";
+import "./global.css";
+import "./typography.css";
 
 class App extends Component {
   constructor(props) {
@@ -12,7 +12,7 @@ class App extends Component {
 
     this.state = {
       focusedStory: null,
-      stories: stories,
+      stories: stories
     };
   }
 
