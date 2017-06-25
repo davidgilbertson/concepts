@@ -26,3 +26,33 @@
 /*transform: rotate(360deg);*/
 /*}*/
 /*}*/
+
+.App__warning {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: firebrick;
+  padding: 3vh 3vw;
+}
+
+.App__warning p {
+  color: white;
+  font-size: 30px;
+  margin-top: 2vh;
+  text-align: center;
+}
+
+@media (min-width: 1000px) {
+  .App__too-small {
+    display: none;
+  }
+}
+
+@supports (--custom: blue) {
+  .App__no-css-var {
+    display: none;
+    color: green;
+  }
+}

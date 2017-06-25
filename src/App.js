@@ -1,18 +1,18 @@
-import React, { Component } from "react";
-import stories from "./data/storyData";
-import Header from "./Header/Header";
-import Stories from "./Stories/Stories";
-import "./App.css";
-import "./global.css";
-import "./typography.css";
+import React, { Component } from 'react';
+import stories from './data/storyData';
+import Header from './Header/Header';
+import Stories from './Stories/Stories';
+import './App.css';
+import './global.css';
+import './typography.css';
 
 class App extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      focusedStory: null,
-      stories: stories
+      focusedStoryId: null,
+      stories: stories,
     };
   }
 
@@ -23,11 +23,24 @@ class App extends Component {
         <Header />
 
         <Stories
-          setFocusedStory={focusedStory => {
-            this.setState({ focusedStory });
+          setFocusedStory={focusedStoryId => {
+            this.setState({ focusedStoryId });
           }}
           stories={this.state.stories}
+          focusedStoryId={this.state.focusedStoryId}
         />
+
+        <div className="App__warning App__too-small">
+          <p>This page is not for you</p>
+          <p>What you've found is a proof of concept for displaying content on large screens</p>
+          <p>I don't want to make a whole thing about it, but yours isn't big enough</p>
+        </div>
+
+        <div className="App__warning App__no-css-var">
+          <p>Oh no you don't</p>
+          <p>This website is for hip young things with browsers that support CSS variables</p>
+          <p>You may like to try literally any other browser</p>
+        </div>
 
       </div>
     );

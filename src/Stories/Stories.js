@@ -1,6 +1,7 @@
-import React, { PropTypes } from "react";
-import "./Stories.css";
-import Story from "../Story/Story";
+import React from 'react';
+import PropTypes from 'prop-types';
+import './Stories.css';
+import Story from '../Story/Story';
 
 const Stories = props => {
   const track1Stories = [];
@@ -32,27 +33,52 @@ const Stories = props => {
     <main className="Stories">
       <div className="Stories__track Stories__track-1 Stories__track--small">
         {track1Stories.map(story =>
-          <Story setFocusedStory={props.setFocusedStory} story={story} />
+          <Story
+            key={story.id}
+            setFocusedStory={props.setFocusedStory}
+            focusedStoryId={props.focusedStoryId}
+            story={story}
+          />
         )}
       </div>
       <div className="Stories__track Stories__track-2 Stories__track--medium">
         {track2Stories.map(story =>
-          <Story setFocusedStory={props.setFocusedStory} story={story} />
+          <Story
+            key={story.id}
+            setFocusedStory={props.setFocusedStory}
+            focusedStoryId={props.focusedStoryId}
+            story={story}
+          />
         )}
       </div>
       <div className="Stories__track Stories__track-3 Stories__track--large">
         {track3Stories.map(story =>
-          <Story setFocusedStory={props.setFocusedStory} story={story} />
+          <Story
+            key={story.id}
+            setFocusedStory={props.setFocusedStory}
+            focusedStoryId={props.focusedStoryId}
+            story={story}
+          />
         )}
       </div>
       <div className="Stories__track Stories__track-4 Stories__track--medium">
         {track4Stories.map(story =>
-          <Story setFocusedStory={props.setFocusedStory} story={story} />
+          <Story
+            key={story.id}
+            setFocusedStory={props.setFocusedStory}
+            focusedStoryId={props.focusedStoryId}
+            story={story}
+          />
         )}
       </div>
       <div className="Stories__track Stories__track-5 Stories__track--small">
         {track5Stories.map(story =>
-          <Story setFocusedStory={props.setFocusedStory} story={story} />
+          <Story
+            key={story.id}
+            setFocusedStory={props.setFocusedStory}
+            focusedStoryId={props.focusedStoryId}
+            story={story}
+          />
         )}
       </div>
     </main>
@@ -61,7 +87,8 @@ const Stories = props => {
 
 Stories.propTypes = {
   setFocusedStory: PropTypes.func.isRequired,
-  stories: PropTypes.array.isRequired
+  stories: PropTypes.array.isRequired,
+  focusedStoryId: PropTypes.number,
 };
 
 export default Stories;

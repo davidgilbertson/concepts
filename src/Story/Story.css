@@ -1,8 +1,8 @@
 .Story {
-  box-shadow: var(--shadow-medium);
-  background: var(--color-white);
+  position: relative; /* so z-index has an effect */
   margin-bottom: 10px;
-}
+  height: calc(var(--local-size) * 3);
+} /* the thing that sits in the slot */
 
 .Story--rank-3 {
   --local-size: var(--size-header--small);
@@ -14,6 +14,40 @@
 
 .Story--rank-1 {
   --local-size: var(--size-header--large);
+}
+
+.Story__wrapper {
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  transition: background 500ms;
+  will-change: background;
+}
+
+.Story__panel {
+  position: relative; /* needed? */
+  box-shadow: var(--shadow-8);
+  background: var(--color-white);
+  overflow: hidden;
+  height: calc(var(--local-size) * 3);
+  transform: translate(0, 0);
+  transition: 0ms;
+  max-width: 100%;
+  will-change: transform, width, height;
+}
+
+.Story__panel::after {
+  content: "";
+  background: linear-gradient(0, white, transparent);
+  position: absolute;
+  bottom: 0;
+  height: 20px; /* should match bottom margin */
+  left: 0;
+  right: 0;
+}
+
+.Story--focused .Story__wrapper {
+  /*background: rgba(0, 0, 0, 0.7);*/
+  z-index: var(--z-index--modal);
 }
 
 .Story__title {
@@ -30,5 +64,11 @@
 }
 
 .Story__body {
-  padding: 10px 10px 20px;
+  padding: 0 10px 20px;
+  font-size: calc(var(--local-size) * .05 + 12px);
+}
+
+.Story__body p {
+  margin-top: 10px;
+  line-height: 1.5;
 }
