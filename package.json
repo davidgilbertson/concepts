@@ -11,6 +11,10 @@
   "devDependencies": {
     "react-scripts": "1.0.7"
   },
+  "engines": {
+    "node": "^8.0.0",
+    "npm": "^5.0.0"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
