@@ -16,6 +16,11 @@ class App extends Component {
     };
   }
 
+  componentDidMount() {
+    performance.mark('app-interactive');
+    console.info('App interactive (ms)', performance.now());
+  }
+
   render() {
     return (
       <div className="App">
