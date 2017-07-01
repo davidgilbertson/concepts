@@ -17,7 +17,8 @@ class App extends Component {
   }
 
   componentDidMount() {
-    performance.mark('app-interactive');
+    performance.mark('Our site is really ready for reading!');
+    console.timeStamp('Hey, the app is interactive now!');
     console.info('App interactive (ms)', performance.now());
   }
 
