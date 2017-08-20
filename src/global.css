@@ -1,9 +1,15 @@
 :root {
-  --color-primary: #2196F3;
   --color-white: white;
-  --color-grey--100: #CFD8DC;
-  --color-grey--200: #B0BEC5;
-  --color-grey--900: #263238;
+  --color-primary--50: #ECEFF1;
+  --color-primary--100: #CFD8DC;
+  --color-primary--200: #B0BEC5;
+  --color-primary--300: #90A4AE;
+  --color-primary--400: #78909C;
+  --color-primary--500: #607D8B;
+  --color-primary--600: #546E7A;
+  --color-primary--700: #455A64;
+  --color-primary--800: #37474F;
+  --color-primary--900: #263238;
 
   --size-header-height: 200px;
   --size-header--small: 45px;
@@ -13,9 +19,9 @@
 
   --size-grid-spacing: 20px;
 
-  --size-rank-1-width: calc(20% * 1.618);
-  --size-rank-2-width: 20%;
-  --size-rank-3-width: calc(20% * 0.618);
+  --size-rank-2-width: 19%;
+  --size-rank-1-width: calc(var(--size-rank-2-width) * 1.618);
+  --size-rank-3-width: calc(var(--size-rank-2-width) * 0.618);
 
   --font-sans-serif: -apple-system,
     BlinkMacSystemFont,
@@ -27,6 +33,12 @@
     "Open Sans",
     "Helvetica Neue",
     sans-serif;
+
+  --font-serif: Georgia,
+    Cambria,
+    "Times New Roman",
+    Times,
+    serif;
 
   --shadow-8: 2px 2px 8px rgba(0, 0, 0, 0.2);
   --shadow-20: 2px 2px 20px rgba(0, 0, 0, 0.2);
@@ -43,14 +55,20 @@ html {
 }
 
 body {
+  margin: 0;
   overflow-y: scroll;
-  font-family: var(--font-sans-serif);
-  color: var(--color-grey--900);
-  background: var(--color-grey--100);
+  font-family: var(--font-serif);
+  color: var(--color-primary--900);
+  background: linear-gradient(-135deg, var(--color-primary--50), var(--color-primary--100));
+  min-height: 100vh;
 }
 
 p, h1 {
   font-size: 100%;
   font-weight: normal;
+  margin: 0;
+}
+
+figure {
   margin: 0;
 }

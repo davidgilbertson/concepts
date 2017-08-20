@@ -3,21 +3,6 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import './Story.css';
 
-function setElementDims(el, dims = {}) {
-  el.style.top = 'top' in dims ? `${dims.top}px` : '';
-  el.style.left = 'left' in dims ? `${dims.left}px` : '';
-  el.style.right = 'right' in dims ? `${dims.right}px` : '';
-  el.style.bottom = 'bottom' in dims ? `${dims.bottom}px` : '';
-  el.style.width = 'width' in dims ? `${dims.width}px` : '';
-}
-
-const FULL_SIZE_DIMS = {
-  top: '0',
-  left: '0',
-  right: '0',
-  bottom: '0',
-};
-
 const WIDTH = 1000;
 const TOP = 100;
 const ANIMATION_MS = 250;
@@ -80,13 +65,37 @@ class Story extends Component {
 
   render() {
     const { props } = this;
-    const isFocused = this.props.story.id === this.props.focusedStoryId;
+    const isFocused = props.story.id === props.focusedStoryId;
 
     const className = classnames(
       'Story',
       `Story--rank-${props.story.rank}`, {
-      'Story--focused': props.story.id === props.focusedStoryId,
+      'Story--focused': isFocused,
     });
+
+    const authorOrImage = props.story.image
+      ? (
+        <figure className="Story__image-wrapper">
+          <img
+            className="Story__image"
+            src={props.story.image}
+            alt=""
+          />
+
+          <figcaption className="Story__image-caption">
+            <span>{props.story.author}</span>
+
+            <span>{props.story.date}</span>
+          </figcaption>
+        </figure>
+      )
+      : (
+        <div className="Story__author-date">
+          <span>{props.story.author}</span>
+
+          <span>{props.story.date}</span>
+        </div>
+      );
 
     return (
       <article
@@ -110,8 +119,12 @@ class Story extends Component {
             ref={ el => this.panelEl = el }
           >
             <h1 className="Story__title">{props.story.title}</h1>
+
+            {authorOrImage}
+
             <div className="Story__body">
-              {props.story.body}
+              {props.story.intro}
+              {isFocused && props.story.remainder}
             </div>
           </div>
         </div>

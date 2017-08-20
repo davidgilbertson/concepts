@@ -1,7 +1,5 @@
 .Header {
   height: var(--size-header-height);
-  background: var(--color-primary);
-  color: var(--color-white);
 }
 
 .Header__text-wrapper {

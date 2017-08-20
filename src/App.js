@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import stories from './data/storyData';
+import makeStories from './data/makeStories';
 import Header from './Header/Header';
 import Stories from './Stories/Stories';
 import './App.css';
@@ -10,16 +10,12 @@ class App extends Component {
   constructor(props) {
     super(props);
 
+    const stories = makeStories(18);
+
     this.state = {
       focusedStoryId: null,
       stories: stories,
     };
-  }
-
-  componentDidMount() {
-    performance.mark('Our site is really ready for reading!');
-    console.timeStamp('Hey, the app is interactive now!');
-    console.info('App interactive (ms)', performance.now());
   }
 
   render() {

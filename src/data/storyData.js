@@ -6,7 +6,23 @@ export default [
     rank: 1,
     author: 'Sam',
     date: new Date(),
-    body: (
+    intro: (
+      <div>
+        <p>
+          11Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas
+          porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies,
+          purus lectus malesuada libero, sit amet commodo magna eros quis urna.
+        </p>
+
+        <p>Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.</p>
+
+        <p>
+          Pellentesque habitant morbi tristique senectus et netus et malesuada
+          fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.
+        </p>
+      </div>
+    ),
+    remainder: (
       <div>
         <p>
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas
@@ -47,7 +63,7 @@ export default [
     rank: 2,
     author: 'Sam',
     date: new Date(),
-    body: <p>hello</p>,
+    remainder: <p>hello</p>,
   },
   {
     id: 3,
@@ -55,7 +71,7 @@ export default [
     rank: 3,
     author: 'Sam',
     date: new Date(),
-    body: (
+    remainder: (
       <div>
         <p>
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas
@@ -81,7 +97,7 @@ export default [
     rank: 2,
     author: 'Sam',
     date: new Date(),
-    body: (
+    remainder: (
       <div>
         <p>
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas
@@ -107,7 +123,7 @@ export default [
     rank: 1,
     author: 'Sam',
     date: new Date(),
-    body: (
+    remainder: (
       <div>
         <p>
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas
@@ -123,7 +139,7 @@ export default [
     rank: 2,
     author: 'Sam',
     date: new Date(),
-    body: (
+    remainder: (
       <div>
         <p>
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas
@@ -139,7 +155,7 @@ export default [
     rank: 3,
     author: 'Sam',
     date: new Date(),
-    body: (
+    remainder: (
       <div>
         <p>
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas
@@ -155,7 +171,7 @@ export default [
     rank: 2,
     author: 'Sam',
     date: new Date(),
-    body: (
+    remainder: (
       <div>
         <p>
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas
@@ -171,7 +187,7 @@ export default [
     rank: 3,
     author: 'Sam',
     date: new Date(),
-    body: (
+    remainder: (
       <div>
         <p>
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas
